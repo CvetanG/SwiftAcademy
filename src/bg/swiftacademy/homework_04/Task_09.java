@@ -13,35 +13,36 @@ public class Task_09 {
 
 	public static void main(String[] args) {
 		
-		StringBuilder temp = new StringBuilder();
-		int length = 0;
+		StringBuilder strBuilder = new StringBuilder();
+		int allLetters = 0;
+		
 		for (int i = 1; i <= 1000; i++) {
 			if (i == 1000) {
-				temp.append(ONE_THOUSAND);
+				strBuilder.append(ONE_THOUSAND);
 			} else {
 				int hundreds = i / 100;
 				int hundredRemainder = i % 100;
 				if (hundreds > 0) {
-					temp.append(ONES[hundreds]).append(HUNDRED);
+					strBuilder.append(ONES[hundreds]).append(HUNDRED);
 					if (hundredRemainder != 0) {
-						temp.append(AND);
+						strBuilder.append(AND);
 					}
 				}
 				if (hundredRemainder > 10 && hundredRemainder < 20) {
-					temp.append(TEENS[(hundredRemainder) % 10]);
+					strBuilder.append(TEENS[(hundredRemainder) % 10]);
 				} else if (hundredRemainder < 10) {
-					temp.append(ONES[hundredRemainder]);
+					strBuilder.append(ONES[hundredRemainder]);
 				} else {
-					temp.append(TENS[(hundredRemainder) / 10]);
+					strBuilder.append(TENS[(hundredRemainder) / 10]);
 					if ((hundredRemainder) % 10 > 0) {
-						temp.append(ONES[(hundredRemainder) % 10]);
+						strBuilder.append(ONES[(hundredRemainder) % 10]);
 					}
 				}
 			}
-			length += temp.length();
-			temp.replace(0, temp.length(), "");
+			allLetters += strBuilder.length();
+			strBuilder.replace(0, strBuilder.length(), "");
 		}
-		System.out.printf("The number of letters is: %d %n", length);
+		System.out.printf("All letters needed: %d %n", allLetters);
 	}
 }
 
