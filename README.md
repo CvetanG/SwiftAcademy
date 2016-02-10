@@ -1,5 +1,5 @@
 # Курс по програмиране на Java
-![Курс по програмиране на Java](Java.png)
+![Курс по програмиране на Java](java_logo.png)
 This is the repository for my course, [Building a Data-Driven App with AngularJS](http://www.lynda.com/AngularJS-tutorials/Building-Data-Driven-App-AngularJS/368918-2.html). The full course is available at [lynda.com](http://lynda.com).
 - [Demo Website](http://chetkins.com)
 - [My Personal Website](http://raybo.org)
