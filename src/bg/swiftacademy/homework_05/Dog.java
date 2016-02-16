@@ -7,22 +7,24 @@ public class Dog {
 	static int dogCount;
 	private static String name; // MyDog-N
 	
+	//constructor Dog
 	private Dog(String name) {
 		Dog.name = name;
 		dogCount += 1; // Modify the value in the constructor
 		bark();
 	}
 	
+	//method check num
 	private static void check(int num){
 		System.out.println("dogCount = " + dogCount);
 		if (dogCount == num) {
 			System.out.println("Even");
 		} else {
 			System.out.println("NOT Even");
-			
 		}
 	}
 	
+	//method bark
 	private static void bark(){
 		System.out.printf("%s is barking very loud%n", name);
 	}
