@@ -3,7 +3,8 @@ package bg.swiftacademy.homework_06_2;
 public class Fishes extends Animal implements Eat, EnterRoom {
 	
 	
-	public Fishes() {
+	public Fishes(Room room) {
+		super(room);
 	}
 	
 	
@@ -15,9 +16,7 @@ public class Fishes extends Animal implements Eat, EnterRoom {
 	
 	@Override
 	public void eat(){
-		if (room == null) {
-			System.out.printf("There are no %s in this house", this.getClass().getSimpleName());
-		} else if (room.food == 0) {
+		if (room.food == 0) {
 			System.out.printf("There is no food in the %s,"
 					+ " for your %s! %n", room.type, this.getClass().getSimpleName());
 		} else {

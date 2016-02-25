@@ -5,14 +5,11 @@ public class Room extends House implements Eat, Feed {
 	String type;
 	int food = 0;
 
-//	public String getType() {
-//		return type;
-//	}
-//	
-//	public void setType(String type) {
-//		this.type = type;
-//	}
-//	
+	public Room (String type) {
+		super();
+		this.type = type;
+	}
+	
 	public int getFood() {
 		return food;
 	}
@@ -21,13 +18,9 @@ public class Room extends House implements Eat, Feed {
 		this.food = food;
 	}
 	
-	public Room () {
-//		this.type = "Living Room";
-	}
 	
-	public Room (String type) {
-		this.type = type;
-	}
+	// Interfaces are implemented just for demo.
+	// So you can put and take food in a room
 	
 	@Override
 	public void eat() {
@@ -35,18 +28,7 @@ public class Room extends House implements Eat, Feed {
 	}
 	
 	@Override
-	public void eat(Room room) {
-		food --;
-	}
-	
-	@Override
 	public void feed() {
 		food ++;
 	}
-	
-	@Override
-	public void feed(Room room) {
-		food ++;
-	}
-	
 }

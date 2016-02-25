@@ -1,8 +1,14 @@
 package bg.swiftacademy.homework_06_2;
 
-abstract class House {
+public class House {
 	
-	protected String address = "Sofia";
+	protected String address;
+
+	public House() {
+		this.address = "Sofia";
+	}
+	
+	
 
 //	public String getAddress() {
 //		return address;

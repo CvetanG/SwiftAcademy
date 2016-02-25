@@ -31,16 +31,16 @@ public class Main {
 		printFood(rooms);
 		
 		
-		Father father1 = new Father("George", 46);
-		Dog dog = new Dog();
+		Father father1 = new Father("George", 46, Kitchen);
+		Dog dog = new Dog(LivingRoom);
 		
 //		father1.enterRoom(Kitchen);
 //		father1.feed();
-		father1.feed(Kitchen);
+		father1.feed();
 		
 		printFood(rooms);
 		
-		dog.enterRoom(LivingRoom);
+//		dog.enterRoom(LivingRoom);
 		dog.eat();
 		printFood(rooms);
 		
